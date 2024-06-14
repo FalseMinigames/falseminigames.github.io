@@ -29,7 +29,7 @@ function addItemToCart() {
   }
 }
 function openCart() {
-  window.location.href = "http://127.0.0.1:3000/Presentacion2/cart.html";
+  window.location.href = "http://falseminigames.github.io/cart.html";
 }
 
 // Handle shop items

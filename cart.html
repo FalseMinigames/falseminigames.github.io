@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="background"></div>
+
+    <header>
+      <a href="index.html" class="backButton"><h6>&lt</h6></a>
+      <img src="Images/logotemp.svg" alt="logotemp" class="logo" />
+    </header>
+
+    <main>
+      <h2>Carrito</h2>
+      <p id="itemCount">0 items en el carrito</p>
+      <p id="priceLabel">Total: 0$</p>
+      <button onclick="clearCart()" class="clearCart pointerOnHover">
+        Borrar Carrito
+      </button>
+
+      <form action="">
+        <label>Nombre: </label>
+        <input type="text" name="" id="" />
+        <label>Apellido: </label>
+        <input type="text" name="" id="" />
+        <label>N° de telefono: </label>
+        <input type="tel" name="" id="" />
+        <label>E-Mail: </label>
+        <input type="mail" name="" id="" />
+        <label>Pais: </label>
+        <input type="text" name="" id="" />
+        <label>Domicilio: </label>
+        <input type="text" name="" id="" />
+        <label>Numero de tarjeta: </label>
+        <input type="number" name="" id="" />
+        <label>CVV:</label>
+        <input type="number" name="" id="" max="999" min="000" />
+      </form>
+
+      <button class="pointerOnHover" id="submitButton" onclick="purchase()">
+        Comprar
+      </button>
+    </main>
+  </body>
+
+  <script>
+    var cartItems = localStorage.getItem("cartItemCount");
+    const itemCount = document.querySelector("#itemCount");
+    const priceLabel = document.querySelector("#priceLabel");
+    const submitButton = document.querySelector("#submitButton");
+
+    itemCount.textContent = cartItems + " items en el carrito";
+    priceLabel.textContent = "Total: " + cartItems * 5000 + "$";
+
+    function clearCart() {
+      cartItems = 0;
+      localStorage.setItem("cartItemCount", 0);
+      itemCount.textContent = cartItems + " items en el carrito";
+      priceLabel.textContent = "Total: " + cartItems * 5000 + "$";
+    }
+    function purchase() {
+      localStorage.setItem("lastPurchase", cartItems)
+      cartItems = 0;
+      localStorage.setItem("cartItemCount", 0);
+      window.location.href = "http://127.0.0.1:3000/Presentacion2/successfulPurchase.html";
+    }
+  </script>
+</html>

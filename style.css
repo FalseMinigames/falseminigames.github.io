@@ -1,0 +1,262 @@
+@font-face {
+    font-family: montserrat;
+    src: url("Fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@keyframes background {
+    from {
+        background-position: -100vw -100vh;
+    }
+    to {
+        background-position: 100vw 100vh;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    background-color: transparent;
+    color: white;
+    font-family: montserrat;
+    font-weight: 600;
+    margin: 0;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(1, 37, 30);
+}
+
+header {
+    background-color: rgb(0, 24, 21);
+}
+
+#background {
+    background: url("Images/diamond.png");
+    background-size: 40px;
+    opacity: .04;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    animation: background 120s infinite linear normal;
+}
+
+.darkBG {
+    background-color: rgb(0, 24, 21);
+}
+
+.lightBG {
+    background-color: rgb(0, 49, 43);
+}
+
+.contrast {
+    background-color: rgb(0, 24, 21);
+    border: 1px solid lightblue;
+}
+
+.nobg {
+    background: none;
+}
+
+.noborder {
+    border: none;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 12vw;
+    position: fixed;
+    transform: translateX(-12vw);
+    display: flex;
+    background-color: black;
+    z-index: 2;
+
+    flex-flow: column;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.sidebarItem {
+    margin-left: 2vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+}
+
+.sidebarItem a {
+    text-decoration: none;
+    
+}
+
+.exitButton {
+    height: 10vh;
+    width: 5vw;
+    align-self: flex-end;
+}
+
+.pointerOnHover:hover {
+    cursor: pointer;
+}
+
+.shopSection {
+    margin: 3%;
+}
+
+.shopSection > h2 {
+    margin-bottom: 3%;
+    font-size: 180%;
+    text-shadow: 5px 0px 10px rgba(255, 255, 255, 0.26);
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    column-gap: 5vw;
+    row-gap: 5vh;
+
+    height: 100%;
+    width: 100%;
+}
+
+.shopItem {
+    background-color: rgb(0, 49, 43);
+    border: 1px solid lightblue;
+    border-radius: 10px;
+
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    height: 40vh;
+}
+
+.shopItem:hover {
+    transform: scale(1.05);
+}
+
+.shopImage {
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    justify-content: center;
+}
+
+.shopImage > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.shopButton {
+    font-size: 70%;
+    height: 6vh;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(5, 88, 79, .5);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.shopButton:hover {
+    background: rgba(6, 110, 98, 0.5);
+}
+
+.customDiv {
+    background: url("Images/Wonder\ Of\ Joseph.png") no-repeat center top,
+    linear-gradient(rgb(82, 2, 19),rgb(39, 0, 0));
+    background-size: 10vw;
+    height: 15vh;
+    width: 7vw;
+    border: 1px solid rgb(145, 136, 83);
+    box-shadow: 0px 0px 50px black;
+    border-radius: 5px;
+
+    position: fixed;
+    bottom: 3vh;
+    right: 1.5vw;
+
+    transition: transform .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.customDiv:hover {
+    transform: scale(1.1);
+}
+
+.customDiv > h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.32vw;
+}
+
+.customBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.customContainer {
+    width: 70%;
+    height: 90%;
+    
+    background: linear-gradient(rgb(82, 2, 19),rgb(39, 0, 0));
+    border: 1px solid rgb(145, 136, 83);
+    border-radius: 5px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.customContainer > h1 {
+    text-align: center;
+}
+
+.customContainer > form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#imgInp {
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+.customContainer > form > img {
+    width: 20vw;
+    height: 20vw;
+}
+
+.customButton {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    width: 15vw;
+    height: 5vh;
+    font-size: large;
+    transition: transform .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.customButton:hover {
+    transform: scale(1.1);
+}
+
+.wonderOfJoseph {
+    position: absolute;
+    bottom: -50vh;
+    left: 10vw;
+    z-index: 1;
+
+}

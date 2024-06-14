@@ -1,0 +1,53 @@
+header {
+    height: 20vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    height: 80%;
+    border: 1px solid lightblue;
+}
+
+.menuButton {
+    height: 50%;
+    aspect-ratio: 1;
+    border: 1px solid lightblue;
+}
+
+.cartButton {
+    height: 50%;
+    aspect-ratio: 1;
+    border: 1px solid lightblue;
+
+    position: relative;
+}
+.cartButton > h6 {
+    font-size: 1vw;
+}
+.cartButton > i {
+    font-size: 2vw;
+}
+.backButton {
+    height: 50%;
+    aspect-ratio: 1;
+    border: 1px solid lightblue;
+
+    position: relative;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+}
+.backButton > h6 {
+    font-size: 3vw;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+button > img {
+    width: 100%;
+}

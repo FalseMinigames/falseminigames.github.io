@@ -1,0 +1,50 @@
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main > h3 {
+    width: 80vw;
+}
+
+.thankYou {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.yourData {
+    text-align: center;
+
+    margin-bottom: 5vh;
+
+}   
+
+.receipt {
+    background-color: rgba(0, 0, 0, 0.459);
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 10% 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: .5vh;
+
+    width: 80vw;
+
+    font-size: large;
+}
+
+.receiptHeader {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
+.receiptEnd {
+    grid-column: 1/3;
+    text-align: right;
+    margin-right: .1vw;
+}
+
+.footer {
+    border-top: 1px dotted white;
+}

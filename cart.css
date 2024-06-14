@@ -1,0 +1,80 @@
+main {
+  margin: 2vw;
+}
+
+#itemCount {
+  margin-top: 1vh;
+}
+
+#priceLabel {
+  margin-top: 1vh;
+  font-size: large;
+}
+
+form {
+
+  display: grid;
+  grid-template-columns: 20% 30% 20% 30%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 40%;
+  column-gap: 0.5vw;
+
+  width: 70vw;
+}
+
+input {
+  background-color: rgba(0, 15, 9, 0.452);
+  margin: 1vh 0;
+}
+
+input[type="text"],
+input[type="mail"],
+input[type="tel"],
+input[type="number"] {
+  border-radius: 5px;
+  border: 1px solid lightblue;
+  font-size: 1vw;
+  height: 4vh;
+}
+#submitButton {
+  width: 14vw;
+  height: 4vh;
+
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: medium;
+
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+#submitButton {
+    translate: 0 1vh;
+}
+.clearCart {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    height: 5vh;
+    border-radius: 10px;
+    margin-top: 2vh;
+    border: none;
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+#submitButton:hover,
+.clearCart:hover {
+    transform: scaleY(1.2);
+}
+#submitButton {
+  grid-column: 1/2;
+}
+input[type="reset"] {
+  grid-column: 2/3;
+}
+label {
+  height: 4vh;
+  line-height: 4vh;
+  text-align: right;
+
+  transform: translate(0px, 1.5vh);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu compra!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="successfulPurchase.css">
+</head>
+<body>
+    <div id="background"></div>
+    <header>
+        <a href="index.html" class="backButton"><h6>&lt</h6></a>
+        <img src="Images/logotemp.svg" alt="logotemp" class="logo" />
+    </header>
+    <h1 class="thankYou">¡Gracias por tu compra!</h1>
+    <h6 class="yourData">y tus datos</h6>
+    <main>
+        <h3>Este es tu recibo:</h3>
+
+        <div class="receipt">
+            <div class="receiptHeader receiptContent">Item</div>
+            <div class="receiptHeader receiptContent">Cantidad</div>
+            <div class="receiptHeader receiptContent">Precio</div>
+    
+            <div class="receiptContent">Poster</div>
+            <div class="receiptContent" id="itemLabel">10</div>
+            <div class="receiptContent" id="priceLabel">$50000</div>
+    
+            <div class="receiptContent receiptEnd footer">Subtotal &nbsp &nbsp </div>
+            <div class="receiptContent footer" id="subtotalLabel">5000</div>
+    
+            <div class="receiptContent receiptEnd">Impuestos &nbsp &nbsp</div>
+            <div class="receiptContent" id="taxLabel">20%</div>
+    
+            <div class="receiptContent receiptEnd">Total &nbsp &nbsp</div>
+            <div class="receiptContent" id="totalLabel">5000</div>
+        </div>
+    </main>
+
+</body>
+<script>
+    const purchasedItems = localStorage.getItem("lastPurchase")
+    const itemLabel = document.querySelector("#itemLabel")
+    const priceLabel = document.querySelector("#priceLabel")
+    const subtotalLabel = document.querySelector("#subtotalLabel")
+    const taxLabel = document.querySelector("#taxLabel")
+    const totalLabel = document.querySelector("#totalLabel")
+    const thankYou = document.querySelector(".thankYou")
+
+    if (purchasedItems) {}else{
+        purchasedItems = 0
+    }
+
+    var discount = Math.floor(Math.random() * 51) / 100
+    
+    itemLabel.textContent = purchasedItems
+    priceLabel.textContent = "$" + purchasedItems * 5000
+    subtotalLabel.textContent = "$" + purchasedItems * 5000
+    taxLabel.textContent = Math.floor(discount * 100) + "%"
+    totalLabel.textContent = "$" + (purchasedItems * 5000 + purchasedItems * 5000 * discount)
+
+    if (discount == 0) {
+        thankYou.textContent = "PROMOCION! 0% de descuento"
+    }
+
+</script>
+</html>

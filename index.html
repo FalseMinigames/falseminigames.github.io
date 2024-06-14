@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stickerly - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="background"></div>
+
+    <div class="sidebar">
+      <button
+        class="exitButton noborder nobg pointerOnHover"
+        onclick="hideSidebar()"
+      >
+        X
+      </button>
+      <div class="sidebarItem nobg">
+        <a href="index.html" class="nobg">Inicio</a>
+      </div>
+      <div class="sidebarItem nobg">
+        <a href="index.html#Popular" class="nobg">Popular</a>
+      </div>
+      <div class="sidebarItem nobg">
+        <a href="index.html#Nuevo" class="nobg">Nuevo</a>
+      </div>
+      <div class="sidebarItem nobg">
+        <a href="index.html#Descuentos" class="nobg">Descuentos</a>
+      </div>
+      <div class="sidebarItem nobg">
+        <a href="index.html#Custom" class="nobg">Custom</a>
+      </div>
+    </div>
+    <header>
+      <button
+        type="button"
+        class="menuButton pointerOnHover"
+        onclick="toggleSidebar()"
+      >
+        <img src="Images/untitled.png" alt="" />
+      </button>
+      <img src="Images/logotemp.svg" alt="logotemp" class="logo" />
+      <button
+        type="button"
+        class="cartButton pointerOnHover"
+        onclick="openCart()"
+      >
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h6 id="cartCounter">0</h6>
+      </button>
+    </header>
+
+    <main>
+      
+    </main>
+
+    <button class="customDiv pointerOnHover" onclick="openCustom()">
+      <h2>POSTER CUSTOM</h2>
+    </button>
+
+    <div class="customBackground">
+      <div class="customContainer">
+        <img class="wonderOfJoseph" src="Images/Wonder Of Joseph.png" alt="">
+        <h1>PEDIR UN POSTER <br> CON TU PROPIA IMAGEN</h1>
+        <br>
+        <form>
+          <label>Elige una imagen:</label>
+          <input accept="image/*" type='file' id="imgInp" onchange="onCustomInputChange(event)">
+          <br>
+          <img id="customPreview" src="#" alt=""/>
+          <br>
+          <input type="button" value="Enviar" onclick="addCustomToCart()" class="customButton pointerOnHover">
+        </form>
+      </div>
+    </div>
+    <h3>Santa Cruz Felipe</h3>
+  </body>
+</html>

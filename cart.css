@@ -78,3 +78,20 @@ label {
 
   transform: translate(0px, 1.5vh);
 }
+
+@media (max-width:600px) {
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    width: 100%;
+  }
+  label {
+    text-align: left;
+    margin-bottom: 1vh;
+  }
+  #submitButton {
+    width: 30%;
+    margin-bottom: 10vh;
+  }
+}

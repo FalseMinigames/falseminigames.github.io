@@ -48,3 +48,9 @@ main > h3 {
 .footer {
     border-top: 1px dotted white;
 }
+
+@media (max-width:600px) {
+    .receipt {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

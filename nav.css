@@ -25,10 +25,10 @@ header {
     position: relative;
 }
 .cartButton > h6 {
-    font-size: 1vw;
+    font-size: 100%;
 }
 .cartButton > i {
-    font-size: 2vw;
+    font-size: 100%;
 }
 .backButton {
     height: 50%;

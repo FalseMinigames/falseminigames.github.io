@@ -1,9 +1,14 @@
 const sidebar = document.querySelector(".sidebar");
-const closeGoal = "translateX(-12vw)";
 const cartCounter = document.querySelector("#cartCounter");
+var closeGoal = "translateX(-" + (sidebar.offsetWidth + 5).toString() + "px)";
 var cartItems = localStorage.getItem("cartItemCount");
 cartCounter.textContent = cartItems;
 sidebar.style.transform = closeGoal;
+
+function updateCloseGoal(){
+  closeGoal = "translateX(-" + (sidebar.offsetWidth).toString() + "px)";
+  sidebar.style.transform = closeGoal;
+}
 
 function hideSidebar() {
   sidebar.style.transform = closeGoal;
@@ -29,47 +34,43 @@ function addItemToCart() {
   }
 }
 function openCart() {
-  window.location.href = "http://falseminigames.github.io/cart.html";
+  window.location.href = "http://127.0.0.1:3000/Presentacion2/cart.html";
 }
+
+window.addEventListener("resize", updateCloseGoal)
 
 // Handle shop items
 
 const data = {
   Popular: [
-    "Images/1000x1000.png",
-    "Images/StoreDisplay-300.png",
-    "Images/stickerShopLogo.png",
-    "Images/jojologo.png",
-    "Images/bg.png",
-    "Images/bg2.png",
-    "Images/weatherRisort.png",
-    "Images/YardStare.jpg",
-    "Images/seamless_stars.png",
-    "Images/softandwetoh.png",
+    "Images/Jonathan.jpg",
+    "Images/joseph.jpg",
+    "Images/Jotaro.jpg",
+    "Images/Josuke.jpg",
+    "Images/Giorno.jpg",
+    "Images/Jolyne.jpg",
+    "Images/Gojo.jpg",
+    "Images/Itadori.jpg",
   ],
   Nuevo: [
-    "Images/1000x1000.png",
-    "Images/StoreDisplay-300.png",
-    "Images/stickerShopLogo.png",
-    "Images/jojologo.png",
-    "Images/bg.png",
-    "Images/bg2.png",
-    "Images/weatherRisort.png",
-    "Images/YardStare.jpg",
-    "Images/seamless_stars.png",
-    "Images/softandwetoh.png",
+    "Images/Jonathan.jpg",
+    "Images/joseph.jpg",
+    "Images/Jotaro.jpg",
+    "Images/Josuke.jpg",
+    "Images/Giorno.jpg",
+    "Images/Jolyne.jpg",
+    "Images/Gojo.jpg",
+    "Images/Itadori.jpg",
   ],
   Limitados: [
-    "Images/1000x1000.png",
-    "Images/StoreDisplay-300.png",
-    "Images/stickerShopLogo.png",
-    "Images/jojologo.png",
-    "Images/bg.png",
-    "Images/bg2.png",
-    "Images/weatherRisort.png",
-    "Images/YardStare.jpg",
-    "Images/seamless_stars.png",
-    "Images/softandwetoh.png",
+    "Images/Jonathan.jpg",
+    "Images/joseph.jpg",
+    "Images/Jotaro.jpg",
+    "Images/Josuke.jpg",
+    "Images/Giorno.jpg",
+    "Images/Jolyne.jpg",
+    "Images/Gojo.jpg",
+    "Images/Itadori.jpg",
   ],
 };
 const main = document.querySelector("main");

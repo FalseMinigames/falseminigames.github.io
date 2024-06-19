@@ -1,0 +1,33 @@
+footer {
+    background: black;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    width: 50%;
+    height: 70%;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30% 1fr 1fr 1fr;
+}
+
+.linkSection {
+    font-weight: bold;
+}
+
+.links > a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+footer > h3 {
+    align-self: flex-start;
+    margin-left: 1vw;
+}

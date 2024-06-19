@@ -34,7 +34,7 @@ function addItemToCart() {
   }
 }
 function openCart() {
-  window.location.href = "http://127.0.0.1:3000/Presentacion2/cart.html";
+  window.location.href = "https://falseminigames.github.io/cart.html";
 }
 
 window.addEventListener("resize", updateCloseGoal)
@@ -97,6 +97,7 @@ for (let [key, value] of Object.entries(data)) {
     const shopButton = document.createElement("button");
 
     shopImage.setAttribute("src", image);
+    shopImage.setAttribute("alt", image)
     shopButton.textContent = "Añadir al carrito";
 
     shopItem.setAttribute("class", "shopItem");

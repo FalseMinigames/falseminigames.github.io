@@ -31,3 +31,13 @@ footer > h3 {
     align-self: flex-start;
     margin-left: 1vw;
 }
+
+@media (max-width:600px) {
+    footer {
+        height: 120vh;
+    }
+    .links {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 30% 1fr 1fr 1fr);
+    }
+}

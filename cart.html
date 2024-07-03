@@ -25,13 +25,32 @@
 
     <main>
       <h2>Carrito</h2>
+
+      <form>
+        <label>Tamaño: &nbsp;</label>
+        <input type="radio" name="size" checked />
+        <label>45,72 x 60,92 cm</label>
+        <input type="radio" name="size" />
+        <label>48,26 x 33,02 cm </label>
+        <input type="radio" name="size" />
+        <label>50,8 x 60,92 cm </label>
+        <br />
+        <label>Marco: &nbsp;</label>
+        <input type="radio" name="mat" checked />
+        <label>Ninguno</label>
+        <input type="radio" name="mat" />
+        <label>Madera</label>
+        <input type="radio" name="mat" />
+        <label>Metal</label>
+      </form>
+
       <p id="itemCount">0 items en el carrito</p>
       <p id="priceLabel">Total: 0$</p>
       <button onclick="clearCart()" class="clearCart pointerOnHover">
         Borrar Carrito
       </button>
 
-      <form action="">
+      <form action="" class="information">
         <label>Nombre: </label>
         <input type="text" name="" id="" />
         <label>Apellido: </label>
@@ -72,10 +91,11 @@
       priceLabel.textContent = "Total: " + cartItems * 5000 + "$";
     }
     function purchase() {
-      localStorage.setItem("lastPurchase", cartItems)
+      localStorage.setItem("lastPurchase", cartItems);
       cartItems = 0;
       localStorage.setItem("cartItemCount", 0);
-      window.location.href = "http://127.0.0.1:3000/Presentacion2/successfulPurchase.html";
+      window.location.href =
+        "http://127.0.0.1:3000/Presentacion2/successfulPurchase.html";
     }
   </script>
 </html>

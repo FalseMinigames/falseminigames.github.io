@@ -11,7 +11,7 @@ main {
   font-size: large;
 }
 
-form {
+.information {
 
   display: grid;
   grid-template-columns: 20% 30% 20% 30%;

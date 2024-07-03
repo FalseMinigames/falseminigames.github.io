@@ -275,6 +275,22 @@ header {
 
 }
 
+.title {
+    text-align: center;
+    background: linear-gradient(rgba(255, 0, 43, 0.548), rgba(255, 0, 43, 0.199))
+    
+}
+
+.description {
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(rgba(255, 0, 43, 0.199), rgba(255, 0, 43, 0))
+}
+
 @media (max-width: 800px) {
     .gridLayout {
         grid-template-columns: 1fr 1fr;

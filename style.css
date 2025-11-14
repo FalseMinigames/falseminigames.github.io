@@ -1,0 +1,63 @@
+body {
+    background: rgb(15, 11, 27);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    border: 1px white solid;
+}
+
+#gameCanvas {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: none;
+
+    background: black;
+}
+
+#flashlight {
+    height: 60%;
+    aspect-ratio: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    bottom: 50%;
+    mix-blend-mode: hard-light;
+    z-index: 10;
+}
+
+#flashgoal {
+    position: absolute;
+}
+
+#beginButton {
+    width: 100px;
+    height: 30px;
+}
+
+.robot {
+    height: 0%;
+    aspect-ratio: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    bottom: 50%;
+}
+
+#bear {
+    left: 20%;
+}
+
+#fox {
+    left: 80%;
+}

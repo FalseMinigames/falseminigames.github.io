@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h2 id="title">Armature!</h2>
+    </header>
+
+    <main>
+      <button id="beginButton" type="button" onclick="init()">Begin Game</button>
+      <div id="gameCanvas">
+        <img id="flashlight" src="IMG/flashlight.png" alt="flashlight">
+        <div id="flashgoal"></div>
+        <img src="IMG/creepyfox.png" alt="" class="robot" id="fox" data-dir="-1">
+        <img src="IMG/ripoffbear.png" alt="" class="robot" id="bear" data-dir="1">
+      </div>
+    </main>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script defer src="main.js"></script>
+  </body>
+</html>
